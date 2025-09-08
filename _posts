@@ -1,0 +1,23 @@
+---
+layout: post
+title: "ResNet"
+date: 2025-09-08
+categories: [논문리뷰, AI, 비]
+---
+
+## 📌 논문 정보
+- 제목: Deep Residual Learning for Image Recognition
+- 저자:  Kaiming He et al.
+
+## 📖 요약
+논문에서 다룬 문제와 핵심 아이디어 설명.
+
+## 🔍 핵심 기여
+1. 기존 연구의 한계 극복
+2. 새로운 모델/알고리즘 제안
+3. 주요 실험 결과
+
+## 💡 내 생각
+- 장점: …
+- 한계: …
+- 앞으로 활용할 수 있는 아이디어: …
