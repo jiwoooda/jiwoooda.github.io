@@ -1,23 +1,48 @@
 ---
 layout: post
-title: "ResNet"
+title: "[논문 리뷰] ResNet: Deep Residual Learning for Image Recognition"
 date: 2025-09-08
-categories: [논문리뷰, AI, 비]
+categories: [논문리뷰, AI, ComputerVision]
+tags: [DeepLearning, ResNet, ImageRecognition]
 ---
 
 ## 📌 논문 정보
-- 제목: Deep Residual Learning for Image Recognition
-- 저자:  Kaiming He et al.
+- **제목**: Deep Residual Learning for Image Recognition  
+- **저자**: Kaiming He et al.  
+- **학회/저널**: CVPR 2016  
+- **링크**: [논문 PDF](https://arxiv.org/abs/1512.03385)  
 
-## 📖 요약
-논문에서 다룬 문제와 핵심 아이디어 설명.
+---
 
-## 🔍 핵심 기여
-1. 기존 연구의 한계 극복
-2. 새로운 모델/알고리즘 제안
-3. 주요 실험 결과
+## 📖 요약 (Summary)
+이 논문은 **Residual Block** 개념을 도입하여, 네트워크가 깊어질수록 발생하는 **gradient vanishing 문제**를 해결하고, 훨씬 더 깊은 모델 학습을 가능하게 했다.  
 
-## 💡 내 생각
-- 장점: …
-- 한계: …
-- 앞으로 활용할 수 있는 아이디어: …
+---
+
+## 🔍 핵심 아이디어 (Key Ideas)
+1. **Residual Connection**: 입력을 출력에 더해줌(skip connection).  
+2. **Degradation 문제 해결**: 단순히 네트워크 깊이를 늘리면 오히려 정확도가 떨어지던 현상을 극복.  
+3. **성능**: ImageNet, COCO 등 주요 벤치마크에서 SOTA 달성.  
+
+---
+
+## 📊 실험 결과 (Results)
+- 152-layer ResNet이 기존 19-layer VGGNet보다 훨씬 좋은 성능을 냄.  
+- ImageNet Top-5 Error: **3.57%** (당시 기준 최고 기록).  
+
+---
+
+## 💡 내 생각 (My Thoughts)
+- **장점**  
+  - 구조가 간단하면서도 효과적.  
+  - 이후 다양한 아키텍처(DenseNet, Transformer 등)에 큰 영향을 줌.  
+- **한계**  
+  - 단순 skip connection만으로는 모든 문제 해결 불가 (예: long-term dependency).  
+- **활용 아이디어**  
+  - 멀티모달 모델에서도 residual 개념을 적용하면 좋을 듯.  
+
+---
+
+## 📚 참고자료
+- [ResNet Original Paper](https://arxiv.org/abs/1512.03385)  
+- [논문 해설 블로그](https://towardsdatascience.com/deep-residual-learning-resnet-explained-5530ed8e9e20)  
