@@ -1,10 +1,11 @@
 ---
 layout: post
-title: "[논문 리뷰] ResNet: Deep Residual Learning for Image Recognition"
+title: '[논문 리뷰] ResNet - Deep Residual Learning for Image Recognition'
 date: 2025-09-08
-categories: [논문리뷰, AI, ComputerVision]
-tags: [DeepLearning, ResNet, ImageRecognition]
+categories: ["논문리뷰", "AI", "ComputerVision"]
+tags: ["DeepLearning", "ResNet", "ImageRecognition"]
 ---
+
 
 ## 📌 논문 정보
 - **제목**: Deep Residual Learning for Image Recognition  
