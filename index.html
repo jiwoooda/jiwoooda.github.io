@@ -284,6 +284,40 @@
 
     .proj-links a:hover { color: #111; border-color: #aaa; }
 
+    /* TABS */
+    .tab-bar {
+      display: flex;
+      gap: 0;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 32px;
+    }
+
+    .tab-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--muted);
+      padding: 10px 24px;
+      border-bottom: 2px solid transparent;
+      margin-bottom: -1px;
+      transition: color 0.15s, border-color 0.15s;
+    }
+
+    .tab-btn:hover { color: var(--text); }
+
+    .tab-btn.active {
+      color: var(--text);
+      border-bottom: 2px solid var(--accent);
+    }
+
+    .tab-panel { display: none; }
+    .tab-panel.active { display: block; }
+
     /* TALKS */
     .talk {
       display: flex;
@@ -424,152 +458,162 @@
     </div>
   </div>
 
-  <!-- PROJECTS -->
+  <!-- PROJECTS + TALKS 탭 -->
   <section id="projects">
-    <div class="sec-divider"><span>Projects</span></div>
+    <div class="sec-divider"><span>Work</span></div>
 
-    <div class="project-card">
-      <div class="proj-meta">
-        <span class="proj-date">Jan – Jun 2026</span>
-        <span class="proj-tag">Generative AI</span>
-      </div>
-      <h3>Vector Animation Generation via Diffusion Priors</h3>
-      <p>Investigated SVG animation generation using T2V diffusion priors and Score Distillation Sampling (SDS). Conducted literature review and problem formulation for language-conditioned vector animation with DiffVG.</p>
-      <div class="proj-footer">
-        <div class="techs">
-          <span class="tech">PyTorch</span><span class="tech">DiffVG</span><span class="tech">SDS</span><span class="tech">T2V Diffusion</span>
-        </div>
-        <div class="proj-links">
-          <a href="slides/svg_animation.pdf" target="_blank">↗ Slides</a>
-        </div>
-      </div>
+    <div class="tab-bar">
+      <button class="tab-btn active" onclick="switchTab('projects')">Projects</button>
+      <button class="tab-btn" onclick="switchTab('seminars')">Paper Seminars</button>
     </div>
 
-    <div class="project-card">
-      <div class="proj-meta">
-        <span class="proj-date">Mar 2026 – present</span>
-        <span class="proj-tag">Multi-Agent</span>
-      </div>
-      <h3>딸랑구 — Voice-First AI Shopping Assistant for Elderly</h3>
-      <p>Designed a multi-agent architecture (Orchestrator + 4 specialist agents) integrating LangGraph routing, MCP tools, and 3-stage HITL verification for a voice-based shopping assistant tailored to elderly users.</p>
-      <div class="proj-footer">
-        <div class="techs">
-          <span class="tech">LangGraph</span><span class="tech">MCP</span><span class="tech">VAD</span><span class="tech">TTS/STT</span>
+    <!-- PROJECTS 패널 -->
+    <div class="tab-panel active" id="tab-projects">
+
+      <div class="project-card">
+        <div class="proj-meta">
+          <span class="proj-date">Jan – Jun 2026</span>
+          <span class="proj-tag">Generative AI</span>
         </div>
-        <div class="proj-links">
-          <a href="https://github.com/jiwoooda/ddalangoo_agent" target="_blank">↗ GitHub</a>
-          <a href="slides/ddalangoo.pdf" target="_blank">↗ Slides</a>
+        <h3>Vector Animation Generation via Diffusion Priors</h3>
+        <p>Investigated SVG animation generation using T2V diffusion priors and Score Distillation Sampling (SDS). Conducted literature review and problem formulation for language-conditioned vector animation with DiffVG.</p>
+        <div class="proj-footer">
+          <div class="techs">
+            <span class="tech">PyTorch</span><span class="tech">DiffVG</span><span class="tech">SDS</span><span class="tech">T2V Diffusion</span>
+          </div>
+          <div class="proj-links">
+            <a href="slides/svg_animation.pdf" target="_blank">↗ Slides</a>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="project-card">
-      <div class="proj-meta">
-        <span class="proj-date">Sep – Dec 2025</span>
-        <span class="proj-tag">VLM · Pipeline</span>
-      </div>
-      <h3>VLM-based Table Recognition and Question Generation Pipeline</h3>
-      <p>End-to-end PDF pipeline with multi-agent design: VLM table recognition → LLM QA generation → verification → distractor generation.</p>
-      <div class="proj-footer">
-        <div class="techs">
-          <span class="tech">VLM</span><span class="tech">LLM</span><span class="tech">PDF Parsing</span>
+      <div class="project-card">
+        <div class="proj-meta">
+          <span class="proj-date">Mar 2026 – present</span>
+          <span class="proj-tag">Multi-Agent</span>
         </div>
-        <div class="proj-links">
-          <a href="slides/table_pipeline.pdf" target="_blank">↗ Slides</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="project-card">
-      <div class="proj-meta">
-        <span class="proj-date">Apr – Jun 2025</span>
-        <span class="proj-tag">Video · Retrieval</span>
-      </div>
-      <h3>YouTube Video Information Extraction System</h3>
-      <p>End-to-end pipeline (YouTube API + Whisper + GPT-4-turbo) for timestamp-aware retrieval and summarization of query-relevant segments.</p>
-      <div class="proj-footer">
-        <div class="techs">
-          <span class="tech">Whisper</span><span class="tech">GPT-4-turbo</span><span class="tech">YouTube API</span>
-        </div>
-        <div class="proj-links">
-          <a href="slides/youtube_retrieval.pdf" target="_blank">↗ Slides</a>
+        <h3>딸랑구 — Voice-First AI Shopping Assistant for Elderly</h3>
+        <p>Designed a multi-agent architecture (Orchestrator + 4 specialist agents) integrating LangGraph routing, MCP tools, and 3-stage HITL verification for a voice-based shopping assistant tailored to elderly users.</p>
+        <div class="proj-footer">
+          <div class="techs">
+            <span class="tech">LangGraph</span><span class="tech">MCP</span><span class="tech">VAD</span><span class="tech">TTS/STT</span>
+          </div>
+          <div class="proj-links">
+            <a href="https://github.com/jiwoooda/ddalangoo_agent" target="_blank">↗ GitHub</a>
+            <a href="slides/ddalangoo.pdf" target="_blank">↗ Slides</a>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="project-card">
-      <div class="proj-meta">
-        <span class="proj-date">Jul – Aug 2025</span>
-        <span class="proj-tag">NLP</span>
-      </div>
-      <h3>LLM-based AI-generated Text Detection</h3>
-      <p>DACON competition: classified AI-generated vs. human-written Korean text via perplexity scoring, embedding clustering, and perturbation-based ensemble — 87.7% accuracy.</p>
-      <div class="proj-footer">
-        <div class="techs">
-          <span class="tech">HuggingFace</span><span class="tech">Perplexity</span><span class="tech">Ensemble</span>
+      <div class="project-card">
+        <div class="proj-meta">
+          <span class="proj-date">Sep – Dec 2025</span>
+          <span class="proj-tag">VLM · Pipeline</span>
         </div>
-        <div class="proj-links">
-          <a href="slides/text_detection.pdf" target="_blank">↗ Slides</a>
+        <h3>VLM-based Table Recognition and Question Generation Pipeline</h3>
+        <p>End-to-end PDF pipeline with multi-agent design: VLM table recognition → LLM QA generation → verification → distractor generation.</p>
+        <div class="proj-footer">
+          <div class="techs">
+            <span class="tech">VLM</span><span class="tech">LLM</span><span class="tech">PDF Parsing</span>
+          </div>
+          <div class="proj-links">
+            <a href="slides/table_pipeline.pdf" target="_blank">↗ Slides</a>
+          </div>
         </div>
       </div>
-    </div>
 
-  </section>
-
-  <!-- TALKS -->
-  <section id="talks">
-    <div class="sec-divider"><span>Paper Seminar Presentations</span></div>
-
-    <div class="talk">
-      <div class="talk-left">
-        <h4>VectorFusion: Text-to-SVG by Abstracting Pixel-Based Diffusion Models</h4>
-        <div class="talk-sub">Ajay Jain, Amber Xie, Pieter Abbeel · Presented at AIVLab Seminar<br>SDS loss를 SVG 생성에 적용하는 핵심 방법론, 연구 방향 설정에 직접 활용</div>
+      <div class="project-card">
+        <div class="proj-meta">
+          <span class="proj-date">Apr – Jun 2025</span>
+          <span class="proj-tag">Video · Retrieval</span>
+        </div>
+        <h3>YouTube Video Information Extraction System</h3>
+        <p>End-to-end pipeline (YouTube API + Whisper + GPT-4-turbo) for timestamp-aware retrieval and summarization of query-relevant segments.</p>
+        <div class="proj-footer">
+          <div class="techs">
+            <span class="tech">Whisper</span><span class="tech">GPT-4-turbo</span><span class="tech">YouTube API</span>
+          </div>
+          <div class="proj-links">
+            <a href="slides/youtube_retrieval.pdf" target="_blank">↗ Slides</a>
+          </div>
+        </div>
       </div>
-      <div class="talk-link"><a href="slides/talks/vectorfusion.pdf" target="_blank">↗ Slides</a></div>
-    </div>
 
-    <div class="talk">
-      <div class="talk-left">
-        <h4>A Learned Representation for Scalable Vector Graphics (SVG-VAE)</h4>
-        <div class="talk-sub">Raphael Gontijo Lopes et al. · Presented at AIVLab Seminar<br>SVG의 구조적 표현 학습 방법 이해, 벡터 표현 연구 기반</div>
+      <div class="project-card">
+        <div class="proj-meta">
+          <span class="proj-date">Jul – Aug 2025</span>
+          <span class="proj-tag">NLP</span>
+        </div>
+        <h3>LLM-based AI-generated Text Detection</h3>
+        <p>DACON competition: classified AI-generated vs. human-written Korean text via perplexity scoring, embedding clustering, and perturbation-based ensemble — 87.7% accuracy.</p>
+        <div class="proj-footer">
+          <div class="techs">
+            <span class="tech">HuggingFace</span><span class="tech">Perplexity</span><span class="tech">Ensemble</span>
+          </div>
+          <div class="proj-links">
+            <a href="slides/text_detection.pdf" target="_blank">↗ Slides</a>
+          </div>
+        </div>
       </div>
-      <div class="talk-link"><a href="slides/talks/svg_vae.pdf" target="_blank">↗ Slides</a></div>
+
     </div>
 
-    <div class="talk">
-      <div class="talk-left">
-        <h4>Denoising Diffusion Probabilistic Models (DDPM)</h4>
-        <div class="talk-sub">Jonathan Ho, Ajay Jain, Pieter Abbeel · Presented at AIVLab Seminar<br>Diffusion 모델의 수학적 기반 이해, SDS loss 적용을 위한 선행 학습</div>
+    <!-- SEMINARS 패널 -->
+    <div class="tab-panel" id="tab-seminars">
+
+      <div class="sec-divider" style="margin-bottom:24px;"><span>Paper Seminar Presentations</span></div>
+
+      <div class="talk">
+        <div class="talk-left">
+          <h4>VectorFusion: Text-to-SVG by Abstracting Pixel-Based Diffusion Models</h4>
+          <div class="talk-sub">Ajay Jain, Amber Xie, Pieter Abbeel · Presented at AIVLab Seminar<br>Studied the core method of applying SDS loss to SVG generation; directly informed the research direction.</div>
+        </div>
+        <div class="talk-link"><a href="slides/talks/vectorfusion.pdf" target="_blank">↗ Slides</a></div>
       </div>
-      <div class="talk-link"><a href="slides/talks/ddpm.pdf" target="_blank">↗ Slides</a></div>
-    </div>
 
-    <div class="talk">
-      <div class="talk-left">
-        <h4>LottieGPT: Tokenizing Vector Animation for Autoregressive Generation</h4>
-        <div class="talk-sub">Xing et al. · Presented at AIVLab Seminar<br>벡터 애니메이션 생성 최신 동향 파악, 연구 방향 비교 분석</div>
+      <div class="talk">
+        <div class="talk-left">
+          <h4>A Learned Representation for Scalable Vector Graphics (SVG-VAE)</h4>
+          <div class="talk-sub">Raphael Gontijo Lopes et al. · Presented at AIVLab Seminar<br>Studied structured latent representations for SVGs as a foundation for vector generation research.</div>
+        </div>
+        <div class="talk-link"><a href="slides/talks/svg_vae.pdf" target="_blank">↗ Slides</a></div>
       </div>
-      <div class="talk-link"><a href="slides/talks/lottiegpt.pdf" target="_blank">↗ Slides</a></div>
-    </div>
 
-    <div class="sec-divider" style="margin-top:48px;"><span>Background Reading</span></div>
-
-    <div class="talk">
-      <div class="talk-left">
-        <h4>Very Deep Convolutional Networks for Large-Scale Image Recognition (VGGNet)</h4>
-        <div class="talk-sub">Karen Simonyan, Andrew Zisserman · CV 기초 · 딥러닝 아키텍처 이해</div>
+      <div class="talk">
+        <div class="talk-left">
+          <h4>LottieGPT: Tokenizing Vector Animation for Autoregressive Generation</h4>
+          <div class="talk-sub">Xing et al. · Presented at AIVLab Seminar<br>Reviewed recent trends in vector animation generation for comparative analysis with the diffusion-based approach.</div>
+        </div>
+        <div class="talk-link"><a href="slides/talks/lottiegpt.pdf" target="_blank">↗ Slides</a></div>
       </div>
-      <div class="talk-link"><a href="slides/talks/vggnet.pdf" target="_blank">↗ Slides</a></div>
-    </div>
 
-    <div class="talk">
-      <div class="talk-left">
-        <h4>ImageNet Classification with Deep Convolutional Neural Networks (AlexNet)</h4>
-        <div class="talk-sub">Alex Krizhevsky, Ilya Sutskever, Geoffrey Hinton · CV 기초 · 딥러닝 아키텍처 이해</div>
+      <div class="sec-divider" style="margin-top:40px; margin-bottom:24px;"><span>Background Reading</span></div>
+
+      <div class="talk">
+        <div class="talk-left">
+          <h4>Denoising Diffusion Probabilistic Models (DDPM)</h4>
+          <div class="talk-sub">Jonathan Ho, Ajay Jain, Pieter Abbeel<br>Mathematical foundations of diffusion models; prerequisite for understanding SDS loss.</div>
+        </div>
+        <div class="talk-link"><a href="slides/talks/ddpm.pdf" target="_blank">↗ Slides</a></div>
       </div>
-      <div class="talk-link"><a href="slides/talks/alexnet.pdf" target="_blank">↗ Slides</a></div>
-    </div>
 
+      <div class="talk">
+        <div class="talk-left">
+          <h4>Very Deep Convolutional Networks for Large-Scale Image Recognition (VGGNet)</h4>
+          <div class="talk-sub">Karen Simonyan, Andrew Zisserman<br>CV fundamentals; deep learning architecture study.</div>
+        </div>
+        <div class="talk-link"><a href="slides/talks/vggnet.pdf" target="_blank">↗ Slides</a></div>
+      </div>
+
+      <div class="talk">
+        <div class="talk-left">
+          <h4>ImageNet Classification with Deep Convolutional Neural Networks (AlexNet)</h4>
+          <div class="talk-sub">Alex Krizhevsky, Ilya Sutskever, Geoffrey Hinton<br>CV fundamentals; deep learning architecture study.</div>
+        </div>
+        <div class="talk-link"><a href="slides/talks/alexnet.pdf" target="_blank">↗ Slides</a></div>
+      </div>
+
+    </div>
   </section>
 
   <!-- CONTACT -->
@@ -594,29 +638,14 @@
 <footer>© 2026 Jiwoo Won</footer>
 
 <script>
-  const sections = document.querySelectorAll('section, .hero');
+  function switchTab(tab) {
+    document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+    document.querySelectorAll('.tab-panel').forEach(panel => panel.classList.remove('active'));
+    document.getElementById('tab-' + tab).classList.add('active');
+    event.target.classList.add('active');
+  }
+
   const navLinks = document.querySelectorAll('nav ul a');
-
-  window.addEventListener('scroll', () => {
-    let current = '';
-    sections.forEach(sec => {
-      if (window.scrollY >= sec.offsetTop - 100) {
-        current = sec.id;
-      }
-    });
-    navLinks.forEach(link => {
-      link.classList.remove('active');
-      if (link.getAttribute('href') === '#' + current) {
-        link.classList.add('active');
-      }
-    });
-  });
-</script>
-
-<script>
-  const sections = document.querySelectorAll('section, .hero');
-  const navLinks = document.querySelectorAll('nav ul a');
-
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -630,7 +659,7 @@
     });
   }, { threshold: 0.3 });
 
-  document.querySelectorAll('#about, #projects, #talks').forEach(sec => {
+  document.querySelectorAll('#about, #projects, #contact').forEach(sec => {
     observer.observe(sec);
   });
 </script>
