@@ -170,6 +170,7 @@
       <div class="proj-meta"><span class="proj-date">Mar 2026 – present</span><span class="proj-tag">Multi-Agent</span></div>
       <h3>딸랑구 — Voice-First AI Shopping Assistant for Elderly</h3>
       <p>Designed a multi-agent architecture (Orchestrator + 4 specialist agents) integrating LangGraph routing, MCP tools, and 3-stage HITL verification for a voice-based shopping assistant tailored to elderly users.</p>
+      <p style="font-size:0.78rem; color:#aaa; margin-top:8px;"><strong style="color:#888;">My contribution:</strong> Designed overall multi-agent architecture, LangGraph routing, MCP tool integration, and 3-stage HITL verification flow.</p>
       <div class="proj-footer">
         <div class="techs"><span class="tech">LangGraph</span><span class="tech">MCP</span><span class="tech">VAD</span><span class="tech">TTS/STT</span></div>
         <div class="proj-links">
@@ -183,6 +184,7 @@
       <div class="proj-meta"><span class="proj-date">Sep – Dec 2025</span><span class="proj-tag">VLM · Pipeline</span></div>
       <h3>VLM-based Table Recognition and Question Generation Pipeline</h3>
       <p>End-to-end PDF pipeline with multi-agent design: VLM table recognition → LLM QA generation → verification → distractor generation.</p>
+      <p style="font-size:0.78rem; color:#aaa; margin-top:8px;"><strong style="color:#888;">My contribution:</strong> Built end-to-end pipeline architecture; adopted VLM after rule-based extraction failed on diverse document formats.</p>
       <div class="proj-footer">
         <div class="techs"><span class="tech">VLM</span><span class="tech">LLM</span><span class="tech">PDF Parsing</span></div>
         <div class="proj-links">
@@ -208,9 +210,12 @@
       <div class="proj-meta"><span class="proj-date">Jul – Aug 2025</span><span class="proj-tag">NLP</span></div>
       <h3>LLM-based AI-generated Text Detection</h3>
       <p>DACON competition: classified AI-generated vs. human-written Korean text via perplexity scoring, embedding clustering, and perturbation-based ensemble — 87.7% accuracy.</p>
+      <p style="font-size:0.78rem; color:#aaa; margin-top:8px;"><strong style="color:#888;">My contribution:</strong> Data augmentation and fine-tuning a local LLM encoder on augmented data; iterative experimentation — achieved 87.7% accuracy (DACON competition).</p>
+      <img src="images/text_detection_results.png" alt="Experiment results" style="width:100%; border-radius:4px; margin-top:12px; border:1px solid #f0f0f0;">
       <div class="proj-footer">
         <div class="techs"><span class="tech">HuggingFace</span><span class="tech">Perplexity</span><span class="tech">Ensemble</span></div>
         <div class="proj-links">
+          <a href="https://dacon.io/competitions/official/236473/overview/description" target="_blank">↗ Competition</a>
           <a href="https://github.com/pokssakk/Detect_AI_Generated_Text" target="_blank">↗ GitHub</a>
           <a href="slides/text_detection.pdf" target="_blank">↗ Slides</a>
         </div>
@@ -224,53 +229,29 @@
 
     <div class="talk">
       <div class="talk-left">
-        <h4>VectorFusion: Text-to-SVG by Abstracting Pixel-Based Diffusion Models</h4>
-        <div class="talk-sub">Ajay Jain, Amber Xie, Pieter Abbeel · Presented at AIVLab Seminar<br>Studied the core method of applying SDS loss to SVG generation; directly informed the research direction.</div>
-      </div>
-      <div class="talk-link"><a href="slides/talks/vectorfusion.pdf" target="_blank">↗ Slides</a></div>
-    </div>
-
-    <div class="talk">
-      <div class="talk-left">
         <h4>A Learned Representation for Scalable Vector Graphics (SVG-VAE)</h4>
-        <div class="talk-sub">Raphael Gontijo Lopes et al. · Presented at AIVLab Seminar<br>Studied structured latent representations for SVGs as a foundation for vector generation research.</div>
+        <div class="talk-sub">Raphael Gontijo Lopes et al. · Presented at AIVLab Seminar<br>SVG font generation via VAE + SVG decoder; studied expressive latent space for vector representations.</div>
       </div>
       <div class="talk-link"><a href="slides/talks/svg_vae.pdf" target="_blank">↗ Slides</a></div>
     </div>
 
     <div class="talk">
       <div class="talk-left">
+        <h4>VectorFusion: Text-to-SVG by Abstracting Pixel-Based Diffusion Models</h4>
+        <div class="talk-sub">Ajay Jain, Amber Xie, Pieter Abbeel · Presented at AIVLab Seminar<br>Text-based SVG generation using ideas from LDMs; directly informed the research direction.</div>
+      </div>
+      <div class="talk-link"><a href="slides/talks/vectorfusion.pdf" target="_blank">↗ Slides</a></div>
+    </div>
+
+    <div class="talk">
+      <div class="talk-left">
         <h4>LottieGPT: Tokenizing Vector Animation for Autoregressive Generation</h4>
-        <div class="talk-sub">Xing et al. · Presented at AIVLab Seminar<br>Reviewed recent trends in vector animation generation for comparative analysis with the diffusion-based approach.</div>
+        <div class="talk-sub">Xing et al. · Presented at AIVLab Seminar<br>JSON-based vector animation format; reviewed as comparative analysis with the diffusion-based approach.</div>
       </div>
       <div class="talk-link"><a href="slides/talks/lottiegpt.pdf" target="_blank">↗ Slides</a></div>
     </div>
 
-    <div class="sec-divider" style="margin-top:40px; margin-bottom:24px;"><span>Background Reading</span></div>
 
-    <div class="talk">
-      <div class="talk-left">
-        <h4>Denoising Diffusion Probabilistic Models (DDPM)</h4>
-        <div class="talk-sub">Jonathan Ho, Ajay Jain, Pieter Abbeel<br>Mathematical foundations of diffusion models; prerequisite for understanding SDS loss.</div>
-      </div>
-      <div class="talk-link"><a href="slides/talks/ddpm.pdf" target="_blank">↗ Slides</a></div>
-    </div>
-
-    <div class="talk">
-      <div class="talk-left">
-        <h4>Very Deep Convolutional Networks for Large-Scale Image Recognition (VGGNet)</h4>
-        <div class="talk-sub">Karen Simonyan, Andrew Zisserman<br>CV fundamentals; deep learning architecture study.</div>
-      </div>
-      <div class="talk-link"><a href="slides/talks/vggnet.pdf" target="_blank">↗ Slides</a></div>
-    </div>
-
-    <div class="talk">
-      <div class="talk-left">
-        <h4>ImageNet Classification with Deep Convolutional Neural Networks (AlexNet)</h4>
-        <div class="talk-sub">Alex Krizhevsky, Ilya Sutskever, Geoffrey Hinton<br>CV fundamentals; deep learning architecture study.</div>
-      </div>
-      <div class="talk-link"><a href="slides/talks/alexnet.pdf" target="_blank">↗ Slides</a></div>
-    </div>
 
   </section>
 
