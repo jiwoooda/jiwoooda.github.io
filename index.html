@@ -95,8 +95,8 @@
   </div>
   <ul>
     <li><a href="#about">About Me</a></li>
-    <li><a href="#projects">Projects</a></li>
     <li><a href="#research">Research</a></li>
+    <li><a href="#projects">Projects</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
   <div class="nav-icons">
@@ -128,6 +128,49 @@
       <div class="hero-photo"><img src="photo.jpg" alt="Jiwoo Won"></div>
     </div>
   </div>
+
+  <section id="research">
+    <div class="sec-divider"><span>Research</span></div>
+
+    <div class="project-card">
+      <div class="proj-meta"><span class="proj-date">Jan – Jun 2026</span><span class="proj-tag">Generative AI</span></div>
+      <h3>Vector Animation Generation via Diffusion Priors</h3>
+      <p>Investigated SVG animation generation using T2V diffusion priors and Score Distillation Sampling (SDS). Conducted literature review and problem formulation for language-conditioned vector animation with DiffVG.</p>
+      <div class="proj-footer">
+        <div class="techs"><span class="tech">PyTorch</span><span class="tech">DiffVG</span><span class="tech">SDS</span><span class="tech">T2V Diffusion</span></div>
+        <div class="proj-links">
+          <a href="https://github.com/jiwoooda/svg-research" target="_blank">↗ GitHub</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="sec-divider" style="margin-top:48px;"><span>Paper Seminar Presentations</span></div>
+
+    <div class="talk">
+      <div class="talk-left">
+        <h4>A Learned Representation for Scalable Vector Graphics (SVG-VAE)</h4>
+        <div class="talk-sub">Raphael Gontijo Lopes et al. · Presented at AIVLab Seminar<br>SVG font generation via VAE + SVG decoder; studied expressive latent space for vector representations.</div>
+      </div>
+      <div class="talk-link"><a href="slides/talks/svg_vae.pdf" target="_blank">↗ Slides</a></div>
+    </div>
+
+    <div class="talk">
+      <div class="talk-left">
+        <h4>VectorFusion: Text-to-SVG by Abstracting Pixel-Based Diffusion Models</h4>
+        <div class="talk-sub">Ajay Jain, Amber Xie, Pieter Abbeel · Presented at AIVLab Seminar<br>Text-based SVG generation using ideas from LDMs; directly informed the research direction.</div>
+      </div>
+      <div class="talk-link"><a href="slides/talks/vectorfusion.pdf" target="_blank">↗ Slides</a></div>
+    </div>
+
+    <div class="talk">
+      <div class="talk-left">
+        <h4>LottieGPT: Tokenizing Vector Animation for Autoregressive Generation</h4>
+        <div class="talk-sub">Xing et al. · Presented at AIVLab Seminar<br>JSON-based vector animation format; reviewed as comparative analysis with the diffusion-based approach.</div>
+      </div>
+      <div class="talk-link"><a href="slides/talks/lottiegpt.pdf" target="_blank">↗ Slides</a></div>
+    </div>
+
+  </section>
 
   <section id="projects">
     <div class="sec-divider"><span>Projects</span></div>
@@ -197,49 +240,6 @@
 
   </section>
 
-  <section id="research">
-    <div class="sec-divider"><span>Research</span></div>
-
-    <div class="project-card">
-      <div class="proj-meta"><span class="proj-date">Jan – Jun 2026</span><span class="proj-tag">Generative AI</span></div>
-      <h3>Vector Animation Generation via Diffusion Priors</h3>
-      <p>Investigated SVG animation generation using T2V diffusion priors and Score Distillation Sampling (SDS). Conducted literature review and problem formulation for language-conditioned vector animation with DiffVG.</p>
-      <div class="proj-footer">
-        <div class="techs"><span class="tech">PyTorch</span><span class="tech">DiffVG</span><span class="tech">SDS</span><span class="tech">T2V Diffusion</span></div>
-        <div class="proj-links">
-          <a href="https://github.com/jiwoooda/svg-research" target="_blank">↗ GitHub</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="sec-divider" style="margin-top:48px;"><span>Paper Seminar Presentations</span></div>
-
-    <div class="talk">
-      <div class="talk-left">
-        <h4>A Learned Representation for Scalable Vector Graphics (SVG-VAE)</h4>
-        <div class="talk-sub">Raphael Gontijo Lopes et al. · Presented at AIVLab Seminar<br>SVG font generation via VAE + SVG decoder; studied expressive latent space for vector representations.</div>
-      </div>
-      <div class="talk-link"><a href="slides/talks/svg_vae.pdf" target="_blank">↗ Slides</a></div>
-    </div>
-
-    <div class="talk">
-      <div class="talk-left">
-        <h4>VectorFusion: Text-to-SVG by Abstracting Pixel-Based Diffusion Models</h4>
-        <div class="talk-sub">Ajay Jain, Amber Xie, Pieter Abbeel · Presented at AIVLab Seminar<br>Text-based SVG generation using ideas from LDMs; directly informed the research direction.</div>
-      </div>
-      <div class="talk-link"><a href="slides/talks/vectorfusion.pdf" target="_blank">↗ Slides</a></div>
-    </div>
-
-    <div class="talk">
-      <div class="talk-left">
-        <h4>LottieGPT: Tokenizing Vector Animation for Autoregressive Generation</h4>
-        <div class="talk-sub">Xing et al. · Presented at AIVLab Seminar<br>JSON-based vector animation format; reviewed as comparative analysis with the diffusion-based approach.</div>
-      </div>
-      <div class="talk-link"><a href="slides/talks/lottiegpt.pdf" target="_blank">↗ Slides</a></div>
-    </div>
-
-  </section>
-
   <section id="contact">
     <div class="sec-divider"><span>Contact</span></div>
     <div class="contact-row">
@@ -258,7 +258,7 @@
 
 <script>
   const navLinks = document.querySelectorAll('nav ul a');
-  const sections = document.querySelectorAll('#about, #projects, #research, #contact');
+  const sections = document.querySelectorAll('#about, #research, #projects, #contact');
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
