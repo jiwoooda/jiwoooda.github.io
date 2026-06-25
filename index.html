@@ -97,6 +97,7 @@
   </div>
   <ul>
     <li><a href="#about">About Me</a></li>
+    <li><a href="#education">Education</a></li>
     <li><a href="#research">Research</a></li>
     <li><a href="#projects">Projects</a></li>
     <li><a href="#contact">Experience</a></li>
@@ -118,8 +119,7 @@
     <div class="hero-text">
       <h1>Jiwoo Won<span style="color:var(--accent);">.</span></h1>
       <h2>Undergraduate Researcher · Multimodal & Generative AI</h2>
-      <p>I'm a final-year Computer Science student at Sookmyung Women's University (GPA 4.05/4.3), graduating February 2027.</p>
-      <p>My work spans diffusion-based visual generation, video-language pipelines, and multi-agent system design. I'm actively seeking MS/PhD positions for Spring 2027.</p>
+      <p>Final-year CS student at Sookmyung Women's University, graduating February 2027. Interested in video understanding, multimodal learning, and generative models. Actively seeking MS/PhD positions for Spring 2027.</p>
 
       <div style="font-size:0.78rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--text); margin-top:20px; margin-bottom:10px;">Research Interests</div>
       <div class="interests">
@@ -145,6 +145,18 @@
       <div class="hero-photo"><img src="photo.jpg" alt="Jiwoo Won"></div>
     </div>
   </div>
+
+  <section id="education">
+    <div class="sec-divider"><span>Education</span></div>
+    <div style="display:flex; gap:32px; padding:16px 0;">
+      <div style="min-width:140px; font-size:0.75rem; color:#bbb; padding-top:3px;">Mar 2023 – Feb 2027</div>
+      <div>
+        <div style="font-size:1rem; font-weight:600; margin-bottom:4px;">Sookmyung Women's University</div>
+        <div style="font-size:0.85rem; color:#555; margin-bottom:2px;">B.S. in Computer Science</div>
+        <div style="font-size:0.82rem; color:#aaa;">GPA 4.05 / 4.3 &nbsp;·&nbsp; Major GPA 4.11 / 4.3 &nbsp;·&nbsp; Expected Feb 2027</div>
+      </div>
+    </div>
+  </section>
 
   <section id="research">
     <div class="sec-divider"><span>Research</span></div>
@@ -308,7 +320,7 @@
 
 <script>
   const navLinks = document.querySelectorAll('nav ul a');
-  const sections = document.querySelectorAll('#about, #research, #projects, #contact, #contact-info');
+  const sections = document.querySelectorAll('#about, #education, #research, #projects, #contact, #contact-info');
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
