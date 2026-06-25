@@ -7,50 +7,29 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    :root {
-      --accent: #F5C842;
-      --text: #1a1a1a;
-      --muted: #888;
-      --border: #ebebeb;
-      --bg: #fff;
-    }
-
+    :root { --accent: #F5C842; --text: #1a1a1a; --muted: #888; --border: #ebebeb; --bg: #fff; }
     body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); font-size: 14px; line-height: 1.75; }
     a { color: inherit; text-decoration: none; }
 
-    nav {
-      position: fixed; top: 0; left: 0; right: 0;
-      background: rgba(255,255,255,0.95);
-      backdrop-filter: blur(8px);
-      border-bottom: 1px solid var(--border);
-      z-index: 100; height: 60px;
-      display: flex; align-items: center;
-      padding: 0 48px; gap: 24px;
-    }
-
+    nav { position: fixed; top: 0; left: 0; right: 0; background: rgba(255,255,255,0.95); backdrop-filter: blur(8px); border-bottom: 1px solid var(--border); z-index: 100; height: 60px; display: flex; align-items: center; padding: 0 48px; gap: 24px; }
     .nav-profile { display: flex; align-items: center; gap: 12px; margin-right: auto; }
     .nav-photo { width: 36px; height: 36px; border-radius: 50%; overflow: hidden; background: #f0f0f0; flex-shrink: 0; }
     .nav-photo img { width: 100%; height: 100%; object-fit: cover; }
     .nav-info { line-height: 1.3; }
     .nav-name { font-size: 0.88rem; font-weight: 500; }
     .nav-title { font-size: 0.72rem; color: var(--muted); }
-
     nav ul { list-style: none; display: flex; gap: 32px; }
     nav ul a { font-size: 0.78rem; font-weight: 500; color: var(--muted); letter-spacing: 0.05em; text-transform: uppercase; transition: color 0.15s; padding-bottom: 2px; }
     nav ul a:hover { color: var(--text); }
     nav ul a.active { color: var(--text); border-bottom: 2px solid var(--accent); }
-
     .nav-icons { display: flex; gap: 16px; margin-left: 32px; }
     .nav-icons a { color: var(--muted); transition: color 0.15s; }
     .nav-icons a:hover { color: var(--text); }
 
     main { max-width: 900px; margin: 0 auto; padding: 100px 48px 100px; }
-
     .sec-divider { display: flex; align-items: center; gap: 16px; margin-bottom: 40px; }
     .sec-divider::before, .sec-divider::after { content: ''; flex: 1; height: 1px; background: var(--border); }
     .sec-divider span { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); white-space: nowrap; }
-
     section { margin-bottom: 72px; }
 
     .hero { display: flex; align-items: flex-start; justify-content: space-between; gap: 48px; padding: 48px 0 72px; }
@@ -61,7 +40,6 @@
     .hero-photo-wrap { flex-shrink: 0; }
     .hero-photo { width: 220px; height: 220px; border-radius: 50%; background: var(--accent); overflow: hidden; display: flex; align-items: center; justify-content: center; }
     .hero-photo img { width: 100%; height: 100%; object-fit: cover; }
-
     .interests { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
     .int-tag { font-size: 0.78rem; color: #555; border: 1px solid #ddd; padding: 5px 14px; border-radius: 20px; }
 
@@ -78,6 +56,7 @@
     .proj-links { display: flex; gap: 8px; }
     .proj-links a { font-size: 0.75rem; color: #888; border: 1px solid #e0e0e0; padding: 3px 12px; border-radius: 2px; transition: all 0.15s; }
     .proj-links a:hover { color: #111; border-color: #aaa; }
+    .proj-img { width: 100%; border-radius: 4px; margin-top: 12px; border: 1px solid #f0f0f0; display: block; }
 
     .talk { display: flex; justify-content: space-between; align-items: flex-start; padding: 16px 0; border-bottom: 1px solid #f4f4f4; gap: 16px; }
     .talk:last-child { border-bottom: none; }
@@ -117,7 +96,7 @@
   <ul>
     <li><a href="#about">About Me</a></li>
     <li><a href="#projects">Projects</a></li>
-    <li><a href="#seminars">Paper Seminars</a></li>
+    <li><a href="#research">Research</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
   <div class="nav-icons">
@@ -153,33 +132,25 @@
   <section id="projects">
     <div class="sec-divider"><span>Projects</span></div>
 
-    <div class="project-card">
-      <div class="proj-meta"><span class="proj-date">Jan – Jun 2026</span><span class="proj-tag">Generative AI</span></div>
-      <h3>Vector Animation Generation via Diffusion Priors</h3>
-      <p>Investigated SVG animation generation using T2V diffusion priors and Score Distillation Sampling (SDS). Conducted literature review and problem formulation for language-conditioned vector animation with DiffVG.</p>
-      <div class="proj-footer">
-        <div class="techs"><span class="tech">PyTorch</span><span class="tech">DiffVG</span><span class="tech">SDS</span><span class="tech">T2V Diffusion</span></div>
-        <div class="proj-links">
-          <a href="https://github.com/jiwoooda/svg-research" target="_blank">↗ GitHub</a>
-          <a href="slides/svg_animation.pdf" target="_blank">↗ Slides</a>
-        </div>
-      </div>
-    </div>
-
+    <!-- 딸랑구 -->
     <div class="project-card">
       <div class="proj-meta"><span class="proj-date">Mar 2026 – present</span><span class="proj-tag">Multi-Agent</span></div>
       <h3>딸랑구 — Voice-First AI Shopping Assistant for Elderly</h3>
       <p>Designed a multi-agent architecture (Orchestrator + 4 specialist agents) integrating LangGraph routing, MCP tools, and 3-stage HITL verification for a voice-based shopping assistant tailored to elderly users.</p>
-      <p style="font-size:0.78rem; color:#aaa; margin-top:8px;"><strong style="color:#888;">My contribution:</strong> Designed overall multi-agent architecture, LangGraph routing, MCP tool integration, and 3-stage HITL verification flow.</p>
+      <p style="font-size:0.78rem; color:#aaa; margin-top:8px;"><strong style="color:#888;">My contribution:</strong> Designed overall multi-agent architecture, LangGraph routing, MCP tool integration, and 3-stage HITL verification flow. Conducted prompt engineering experiments via LangSmith.</p>
+      <p style="font-size:0.78rem; margin-top:8px; color:#555;">🏆 <strong>AI ROOKIE 2026 — Finalist</strong> (7.21:1 competition ratio) · Team Lead · Ongoing</p>
+      <img src="images/ai_rookie.png" alt="AI ROOKIE 본선 진출" class="proj-img" style="max-width:480px;">
       <div class="proj-footer">
-        <div class="techs"><span class="tech">LangGraph</span><span class="tech">MCP</span><span class="tech">VAD</span><span class="tech">TTS/STT</span></div>
+        <div class="techs"><span class="tech">LangGraph</span><span class="tech">MCP</span><span class="tech">LangSmith</span><span class="tech">VAD</span><span class="tech">TTS/STT</span></div>
         <div class="proj-links">
+          <a href="https://ai-rookie.or.kr/" target="_blank">↗ AI ROOKIE</a>
           <a href="https://github.com/jiwoooda/ddalangoo_agent" target="_blank">↗ GitHub</a>
           <a href="slides/ddalangoo.pdf" target="_blank">↗ Slides</a>
         </div>
       </div>
     </div>
 
+    <!-- VLM Table Pipeline -->
     <div class="project-card">
       <div class="proj-meta"><span class="proj-date">Sep – Dec 2025</span><span class="proj-tag">VLM · Pipeline</span></div>
       <h3>VLM-based Table Recognition and Question Generation Pipeline</h3>
@@ -194,6 +165,23 @@
       </div>
     </div>
 
+    <!-- Text Detection -->
+    <div class="project-card">
+      <div class="proj-meta"><span class="proj-date">Jul – Aug 2025</span><span class="proj-tag">NLP</span></div>
+      <h3>LLM-based AI-generated Text Detection</h3>
+      <p>DACON competition: classified AI-generated vs. human-written Korean text via perplexity scoring, embedding clustering, and perturbation-based ensemble — 88.9% accuracy.</p>
+      <p style="font-size:0.78rem; color:#aaa; margin-top:8px;"><strong style="color:#888;">My contribution:</strong> Data augmentation and fine-tuning a local LLM encoder on augmented data; iterative experimentation — achieved 88.9% accuracy. Team Lead.</p>
+      <img src="images/text_detection_results.png" alt="Experiment results" class="proj-img">
+      <div class="proj-footer">
+        <div class="techs"><span class="tech">HuggingFace</span><span class="tech">Perplexity</span><span class="tech">Ensemble</span></div>
+        <div class="proj-links">
+          <a href="https://dacon.io/competitions/official/236473/overview/description" target="_blank">↗ Competition</a>
+          <a href="https://github.com/pokssakk/Detect_AI_Generated_Text" target="_blank">↗ GitHub</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- YouTube Retrieval -->
     <div class="project-card">
       <div class="proj-meta"><span class="proj-date">Apr – Jun 2025</span><span class="proj-tag">Video · Retrieval</span></div>
       <h3>YouTube Video Information Extraction System</h3>
@@ -201,31 +189,30 @@
       <div class="proj-footer">
         <div class="techs"><span class="tech">Whisper</span><span class="tech">GPT-4-turbo</span><span class="tech">YouTube API</span></div>
         <div class="proj-links">
+          <a href="https://github.com/jiwoooda/YouTube-Retrieval-" target="_blank">↗ GitHub</a>
           <a href="slides/youtube_retrieval.pdf" target="_blank">↗ Slides</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="project-card">
-      <div class="proj-meta"><span class="proj-date">Jul – Aug 2025</span><span class="proj-tag">NLP</span></div>
-      <h3>LLM-based AI-generated Text Detection</h3>
-      <p>DACON competition: classified AI-generated vs. human-written Korean text via perplexity scoring, embedding clustering, and perturbation-based ensemble — 87.7% accuracy.</p>
-      <p style="font-size:0.78rem; color:#aaa; margin-top:8px;"><strong style="color:#888;">My contribution:</strong> Data augmentation and fine-tuning a local LLM encoder on augmented data; iterative experimentation — achieved 87.7% accuracy (DACON competition).</p>
-      <img src="images/text_detection_results.png" alt="Experiment results" style="width:100%; border-radius:4px; margin-top:12px; border:1px solid #f0f0f0;">
-      <div class="proj-footer">
-        <div class="techs"><span class="tech">HuggingFace</span><span class="tech">Perplexity</span><span class="tech">Ensemble</span></div>
-        <div class="proj-links">
-          <a href="https://dacon.io/competitions/official/236473/overview/description" target="_blank">↗ Competition</a>
-          <a href="https://github.com/pokssakk/Detect_AI_Generated_Text" target="_blank">↗ GitHub</a>
-          <a href="slides/text_detection.pdf" target="_blank">↗ Slides</a>
         </div>
       </div>
     </div>
 
   </section>
 
-  <section id="seminars">
-    <div class="sec-divider"><span>Paper Seminar Presentations</span></div>
+  <section id="research">
+    <div class="sec-divider"><span>Research</span></div>
+
+    <div class="project-card">
+      <div class="proj-meta"><span class="proj-date">Jan – Jun 2026</span><span class="proj-tag">Generative AI</span></div>
+      <h3>Vector Animation Generation via Diffusion Priors</h3>
+      <p>Investigated SVG animation generation using T2V diffusion priors and Score Distillation Sampling (SDS). Conducted literature review and problem formulation for language-conditioned vector animation with DiffVG.</p>
+      <div class="proj-footer">
+        <div class="techs"><span class="tech">PyTorch</span><span class="tech">DiffVG</span><span class="tech">SDS</span><span class="tech">T2V Diffusion</span></div>
+        <div class="proj-links">
+          <a href="https://github.com/jiwoooda/svg-research" target="_blank">↗ GitHub</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="sec-divider" style="margin-top:48px;"><span>Paper Seminar Presentations</span></div>
 
     <div class="talk">
       <div class="talk-left">
@@ -251,8 +238,6 @@
       <div class="talk-link"><a href="slides/talks/lottiegpt.pdf" target="_blank">↗ Slides</a></div>
     </div>
 
-
-
   </section>
 
   <section id="contact">
@@ -265,7 +250,6 @@
       <span class="contact-label">GitHub</span>
       <a href="https://github.com/jiwoooda" target="_blank">github.com/jiwoooda</a>
     </div>
-
   </section>
 
 </main>
@@ -274,6 +258,8 @@
 
 <script>
   const navLinks = document.querySelectorAll('nav ul a');
+  const sections = document.querySelectorAll('#about, #projects, #research, #contact');
+
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -285,11 +271,9 @@
         });
       }
     });
-  }, { threshold: 0.2 });
+  }, { rootMargin: '-20% 0px -70% 0px' });
 
-  document.querySelectorAll('#about, #projects, #seminars, #contact').forEach(sec => {
-    observer.observe(sec);
-  });
+  sections.forEach(sec => observer.observe(sec));
 </script>
 
 </body>
